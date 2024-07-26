@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart-Jamin-stores</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--<link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">-->
+
+
+</head>
+<body>
+<div class="header">
+    <div class="contaner">
+        <div class="navbar">
+            <div class="logo">
+                <video autoplay loop width="125px" height="115px" > 
+                   <source src="images/[Original size] jamin.mp4" type="video/mp4">
+                </video>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <form action="/home" method="post">
+                    <li><a href="home">Home</a></li>
+                  </form>
+                    <form action="/product" method="post">
+                    <li><a href="product">Product</a></li>
+                  </form>
+                  <form action="/about" method="post">
+                    <li><a href="about">About</a></li>
+                  </form>
+                  <form action="/contact" method="post">
+                    <li><a href="contact">Contact</a></li>
+                  </form>
+                 
+                  </ul>
+            </nav>
+            <img src="images/cart.png" width="30px" height="30px" alt="">
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" >
+        </div>
+       
+    </div>
+</div>
+
+
+<!--cart iteam details-->
+<div class="small-contaner cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-1.jpg" alt="">
+                    <div>
+                        <p>Red Printed T-shirt</p>
+                        <small>Price: Rs 4,000</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <form action="/num" method="post">
+                    <label for="number">Enter the number of products:</label>
+                    <input type="text" id="number" name="number">
+                    <input type="submit" value="Submit">
+                  </form>
+                  <% if (price) { %>
+                    <h2>Total Price: <%= price %></h2>
+                  <% } %>
+            </td>
+             </tr>
+
+        </table>
+    </div>
+</div>
+ 
+
+ 
+ <!--fotter-->
+ <div class="footer">
+     <div class="contaner">
+         <div class="row">
+             <div class="footer-col-1">
+                 <h3>Download Our App</h3>
+                 <p>Download App for Android and ios mobile phone.</p>
+                 <div class="app-logo">
+                     <img src="images/play-store.png" alt="">
+                     <img src="images/app-store.png" alt="">
+                 </div>
+             </div>
+             <div class="footer-col-2">
+                <img src="images/Jamin.png" alt=""   >
+                <p>Our purpose Is To Sustainably Make the pleasure and sports Benefets of sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+              <ul>
+                  <li>Coupons</li>
+                  <li>Blog Post</li>
+                  <li>Return policy</li>
+                  <li>Join Affliliate</li>
+              </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+              <ul>
+                  <li>Facebook</li>
+                  <li>Twitter</li>
+                  <li>instagram</li>
+                  <li>YouTube</li>
+              </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2020 - By Jamin</p>
+         </div> 
+     </div>
+ </div>
+ <!--js for toggle medu-->
+ <script>
+     var MenuItems = document.getElementById("MenuItems");
+     MenuItems.style.maxHeight="0px";
+     function menutoggle(){
+         if( MenuItems.style.maxHeight == "0px")
+         {
+            MenuItems.style.maxHeight="200px"
+         }
+         else{
+            MenuItems.style.maxHeight="0px"
+         }
+     }
+     const form = document.getElementById("add-to-cart-form");
+const cart = [];
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const itemName = document.getElementById("item-name").value;
+  const itemQuantity = document.getElementById("item-quantity").value;
+  const itemPrice = document.getElementById("item-price").value;
+
+  const item = {
+    name: itemName,
+    quantity: itemQuantity,
+    price: itemPrice
+  };
+
+  cart.push(item);
+
+  console.log("Cart:", cart);
+});
+
+ </script>
+
+</body>
+</html>

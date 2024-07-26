@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products-Jamin-stores</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--<link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">-->
+
+
+</head>
+<body>
+<div class="header">
+    <div class="contaner">
+        <div class="navbar">
+            <div class="logo">
+                <video autoplay loop width="125px" height="115px" > 
+                   <source src="images/[Original size] jamin.mp4" type="video/mp4">
+                </video>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <form action="/home" method="post">
+                    <li><a href="home">Home</a></li>
+                  </form>
+                    <form action="/product" method="post">
+                    <li><a href="product">Product</a></li>
+                  </form>
+                  <form action="/about" method="post">
+                    <li><a href="about">About</a></li>
+                  </form>
+                  <form action="/contact" method="post">
+                    <li><a href="contact">Contact</a></li>
+                  </form>
+                  
+                  </ul>
+            </nav>
+            
+            <a href="/cart"><img src="images/cart.png" width="30px" height="30px" alt=""></a> 
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" >
+        </div>
+       
+    </div>
+</div>
+<!--single product details-->
+<div class="small-contaner single-product" >
+    <div class="row">
+        <div class="col-2">
+          <img src="images/gallery-1.jpg" id="ProductImg" width="100%" alt="">
+          <div class="small-img-row">
+              <div class="small-img-col">
+                  <img src="images/gallery-1.jpg " width="100%" alt="" class="small-img">
+              </div>
+              <div class="small-img-col">
+                <img src="images/gallery-2.jpg " width="100%" alt="" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="images/gallery-3.jpg " width="100%" alt="" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="images/gallery-4.jpg " width="100%" alt="" class="small-img">
+            </div>
+          </div>
+        </div>
+        <form action="add" method="post">
+        <div class="col-2">
+            <p>Home/ T-shirt</p>
+            <h1>Red printed Tshirt by Puma</h1>
+            <h4>Rs 4000</h4>
+           <select >
+               <option >Select size</option>
+               <option >XXL</option>
+               <option >XL</option>
+               <option >L</option>
+               <option >M</option>
+               <option >S</option>
+               <option >XS</option>
+              <input type="number" value="1">
+              
+              <a href="/cart" class="btn">Add To Cart</a>
+            </form>
+              <h3>Product details</h3>
+              <p>Pick comfort and style and ace your basic look with this solid T-shirt. Cut with fine fabric, this t-shirt details out a crew neckline and half-sleeve pattern.
+                  <br>
+                 
+                Type : Crew Neck
+                <br>
+                Design : Solid
+                <br>
+                Style : Sporty
+                <br>
+                Sleeve Length : Half Sleeves
+                <br>
+                Fabric : Cotton
+                <br>
+                Fit : Regular
+                <br>
+                Care Instructions : Machine Wash
+                <br>
+                .Model Wears : Size M, has Height 6'0" and Chest 38"
+                <br>
+                Product : T-shirt
+                <br>
+                Country of Origin : India
+                <br>
+                Manufactured By : Puma Sports India Pvt Ltd
+                <br>
+               
+                For Consumer Complaints Contact : Manager Commercial, Lifestyle International Pvt. Ltd. 1800-123-1555
+                Net Quantity : 1
+                </p>
+
+
+               
+
+           </select>
+        </div>
+    </div>
+</div>
+<!--title-->
+<div class="small-contaner">
+    <div class="row row-2">
+        <h2>Related products</h2>
+        <p>View more</p>
+    </div>
+</div>
+<!--products-->
+ <div class="small-contaner">
+    
+      <div class="row">
+          <div class="col-4">
+              <img src="images/product-5.jpg" alt="">
+              <h4>shoes</h4>
+            <div class="rating">
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star-o" ></i>
+            </div>
+              <p>Rs 29999</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-6.jpg" alt="">
+            <h4>Black printed T-Shirt</h4>
+          <div class="rating">
+         <i class="fa fa-star" ></i>
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star-o" ></i> 
+          </div>
+            <p>Rs 7000 </p>
+        </div>
+        <div class="col-4">
+            <img src="images/product-7.jpg" alt="">
+            <h4>HRX sokes</h4>
+          <div class="rating">
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star-o" ></i>
+          </div>
+            <p>Rs 2000 </p>
+        </div>
+        <div class="col-4">
+            <img src="images/product-8.jpg" alt="">
+            <h4>Fossil Watch</h4>
+          <div class="rating">
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star" ></i>
+              <i class="fa fa-star-o" ></i>
+          </div>
+            <p>Rs 25000</p>
+        </div>
+      </div>
+    
+     
+       
+     
+    </div>
+ 
+ 
+
+ 
+ <!--fotter-->
+ <div class="footer">
+     <div class="contaner">
+         <div class="row">
+             <div class="footer-col-1">
+                 <h3>Download Our App</h3>
+                 <p>Download App for Android and ios mobile phone.</p>
+                 <div class="app-logo">
+                     <img src="images/play-store.png" alt="">
+                     <img src="images/app-store.png" alt="">
+                 </div>
+             </div>
+             <div class="footer-col-2">
+                <img src="images/Jamin.png" alt=""   >
+                <p>Our purpose Is To Sustainably Make the pleasure and sports Benefets of sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+              <ul>
+                  <li>Coupons</li>
+                  <li>Blog Post</li>
+                  <li>Return policy</li>
+                  <li>Join Affliliate</li>
+              </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+              <ul>
+                  <li>Facebook</li>
+                  <li>Twitter</li>
+                  <li>instagram</li>
+                  <li>YouTube</li>
+              </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2020 - By Jamin</p>
+         </div> 
+     </div>
+ </div>
+ <!--js for toggle medu-->
+ <script>
+     var MenuItems = document.getElementById("MenuItems");
+     MenuItems.style.maxHeight="0px";
+     function menutoggle(){
+         if( MenuItems.style.maxHeight == "0px")
+         {
+            MenuItems.style.maxHeight="200px"
+         }
+         else{
+            MenuItems.style.maxHeight="0px"
+         }
+     }
+ </script>
+ <!--product gallery js-->
+ <script>
+     var ProductImg = document.getElementById("ProductImg");
+     var SmallImg = document.getElementsByClassName("small-img");
+     SmallImg[0].onclik=function(){
+        ProductImg.src = SmallImg[0].src;
+     }
+     SmallImg[1].onclik = function(){
+        ProductImg.src = SmallImg[1].src;
+     }
+     SmallImg[2].onclik = function(){
+        ProductImg.src = SmallImg[2].src;
+     }
+     SmallImg[3].onclik = function(){
+        ProductImg.src = SmallImg[3].src;
+     }
+ </script>
+</body>
+</html>

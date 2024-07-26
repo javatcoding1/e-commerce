@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account sign-Jamin-stores</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--<link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">-->
+  </head>
+  <body>
+  
+
+    <!--account page-->
+    <div class="account-page">
+      <div class="contaner">
+        <div class="row">
+          <div class="col-2">
+            <img src="images/image1.png" width="100%" alt="" />
+          </div>
+          <div class="col-2">
+            <div class="form-contaner">
+              <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="Indicator" />
+              </div>
+              <form id="LoginForm" action="/" method="post">
+                <input type="text" name="username" placeholder="username" />
+                <input type="password" name="password" placeholder="password" />
+                <button type="submit"  class="btn">Login</button>
+                <a href="">Forgot password</a>
+              </form>
+              <form id="RegForm" action="/register" method="post">
+                <input type="text" name="username" placeholder="username" />
+                <input type="email" name="email" placeholder="Email" />
+                <input type="password" name="passwordss" placeholder="password" />
+                <button type="submit" class="btn">Register</button>
+                <a href="">Forgot password</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
+    <!--js for toggle medu-->
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <!--js for toggle form-->
+    <script>
+      var LoginForm = document.getElementById("LoginForm");
+      var RegForm = document.getElementById("RegForm");
+      var Indicator = document.getElementById("Indicator");
+      function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+      }
+      function login() {
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+      }
+    </script>
+  </body>
+</html>
